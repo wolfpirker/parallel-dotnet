@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/bin/Debug/net6.0/parallel-dotnet5
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/bin/Debug/net6.0/parallel-dotnet5.deps.json
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/bin/Debug/net6.0/parallel-dotnet5.runtimeconfig.json
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/bin/Debug/net6.0/parallel-dotnet5.dll
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/bin/Debug/net6.0/parallel-dotnet5.pdb
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.AssemblyInfo.cs
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.dll
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/refint/parallel-dotnet5.dll
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.pdb
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/parallel-dotnet5.genruntimeconfig.cache
+/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/obj/Debug/net6.0/ref/parallel-dotnet5.dll

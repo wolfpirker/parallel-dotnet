@@ -239,12 +239,241 @@ task is complete</li>
 <li><br /></li>
 </ul>
 </div>
-<br />
-<br /></div>
+#4. Cancelling Tasks</div>
+<div>see <span style=
+"background-color: rgb(255, 255, 0);">parallel-dotnet4
+project</span>;</div>
+<div>
+<ul>
+<li>the task parallel library provides mechanisms of cancelling
+tasks</li>
+<li>there are two things in the library to cancel a task</li>
+<ul>
+<li>1) <span style="background-color: rgb(0, 255, 255);">a
+cancellation token source</span></li>
+<li>2) <span style="background-color: rgb(0, 255, 255);">a
+cancellation token</span></li>
+</ul>
+<li>with 1)</li>
+<ul>
+<li>code example:</li>
+</ul>
+</ul>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; var cts = new CancellationTokenSource();</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; var token = cts.Token;</font></div>
+<div><font face="courier new"><br /></font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; var t = new Task(() =&gt; {</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; int i = 0;</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; while (true){</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Console.WriteLine($"{i++}\t");</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; }</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; }, token);</font></div>
+<div><font face="courier new"><br /></font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; t.Start();</font></div>
+<div><font face="courier new"><br /></font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; Console.ReadKey();</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; cts.Cancel();</font></div>
+<ul>
+<ul>
+<li><br /></li>
+<li>we can call cts.cancel() to cancel the execution</li>
+<li>however, in TPO cancellation is corporative</li>
+<ul>
+<li>it means that the task that you have made has to be explicitly
+aware of the fact that it's cancelable and it has to perform
+certain action to actually cancel itself</li>
+<li>there are two ways to do that<br />
+&gt; do a break in a while loop or a return&nbsp;<br />
+&gt; or we can look if the cancellation has been requested on a
+token</li>
+<li>for that we can put in our while loop, just that additonal two
+lines:</li>
+<li><span style="background-color: rgb(255, 255, 0);"><font face=
+"courier new">if
+(token.IsCancellationRequested)</font><br /></span><span style=
+"background-color: rgb(255, 255, 0); font-family: 'courier new';">&nbsp;
+&nbsp; break;</span></li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li>that is kind of a "soft exit" out of the task</li>
+</ul>
+<li>a more canonical way</li>
+<ul>
+<li>is <span style="background-color: rgb(255, 255, 0);">to use a
+specific exception instead</span></li>
+<li><span style="background-color: rgb(255, 255, 0);"><font face=
+"courier new">throw new
+OperationCancelledException;</font></span></li>
+<li>that is what the <span style=
+"background-color: rgb(255, 255, 0);">TPO</span> actually recommend
+you do</li>
+<li>it does not cause an exception on the highlevel! Makes sense
+since we expect this exception to happen</li>
+<li>instead of having an if condition, we can write it just on one
+line, with this:<br />
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #9cdcfe;">token</span>.<span style=
+"color: #dcdcaa;">ThrowIfCancellationRequested</span>();</div>
+</li>
+</ul>
+</ul>
+<li>how to monitor and notified about a task which was
+cancelled?<br /></li>
+<ul>
+<li>for that you can use <span style=
+"background-color: rgb(255, 255, 0);">token.Register, like
+that...</span></li>
+</ul>
+</ul>
+<div><font face="courier new">token.Register(()
+=&gt;&nbsp;</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; {</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; Console.WriteLine("Cancelation has been
+requested");</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; });</font></div>
+<ul>
+<li>a bit more complicated the following way:</li>
+<ul>
+<li>Task.Factory.StartNew(() =&gt; ...</li>
+<li>with <span style="background-color: rgb(0, 255, 255);">a
+token.wait handle</span></li>
+<li><span style="background-color: rgb(255, 255, 0);">you wait
+until someone cancels the token</span></li>
+<li><span style="background-color: rgb(255, 255, 0);">more on the
+Wait handles later in the course</span>!</li>
+<li>example:</li>
+</ul>
+</ul>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; Task.Factory.StartNew(() =&gt; {</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; token.WaitHandle.WaitOne();</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; Console.WriteLine("CancellationToken has been
+requested.");</font></div>
+<div><font face="courier new">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; });</font></div>
+<ul>
+<ul>
+<li><br /></li>
+</ul>
+<li><span style="background-color: rgb(255, 255, 0);">another way,
+more complicated:</span></li>
+<ul>
+<li><span style="background-color: rgb(0, 255, 255);">composite
+cancellation token</span></li>
+<li>were you would have several cancellationTokenSource at the same
+time</li>
+<li>then we can have a token source which react to any of the Token
+Sources triggered</li>
+<li>so you combine several TokenSources and basically combine it
+with OR LINK with others</li>
+<li>for this example <span style=
+"background-color: rgb(255, 255, 0);">see project
+parallel-dotnet5&nbsp;</span></li>
+<ul>
+<li>and the implemented function CompositeCancellationToken</li>
+</ul>
+</ul>
+<li><br /></li>
+</ul>
+#5, Waiting for time to pass</div>
+<div>
+<ul>
+<li>different ways of waiting</li>
+<li><span style=
+"background-color: rgb(0, 255, 255);">Thread.Sleep</span> is one
+way - you already saw before</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">pauses thread
+and tells the scheduler, that it can process another
+task</span></li>
+</ul>
+<li>but sometimes a task should not put itself to sleep</li>
+<ul>
+<li>a alternative is to use <span style=
+"background-color: rgb(0, 255, 255);">spin weights</span>
+instead<br />
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #4ec9b0;">Thread</span>.<span style=
+"color: #dcdcaa;">SpinWait</span>(<span style=
+"color: #b5cea8;">10000</span>);</div>
+</li>
+<li>and also <span style=
+"background-color: rgb(0, 255, 255);">SpinWait.SpinUntil()</span></li>
+<li>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #4ec9b0;">SpinWait</span>.<span style=
+"color: #dcdcaa;">SpinUntil</span>(() =&gt; <span style=
+"color: #569cd6;">false</span>);</div>
+<div style="font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="background-color: rgb(255, 255, 255);"><font face=
+"bitstream vera serif">Spin Waiting mean you also pause the thread,
+but you don't give up your line of execution!</font></span></div>
+</li>
+</ul>
+<ul>
+<li>so the scheduler is not getting other Tasks executing!</li>
+<ul>
+<li>while you are spinning, you are just waiting CPU cycles</li>
+<li>you are wasting resources</li>
+<li>you are avoiding context</li>
+</ul>
+</ul>
+<li>so when can spin weight be better to use:</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">if you need
+to wait just a little bit!</span></li>
+</ul>
+<li>another way of pausing a task:</li>
+<ul>
+<li><span style="background-color: rgb(0, 255, 255);">waiting on
+the cancellation token</span></li>
+</ul>
+<li>so basically</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">you can wait
+a certain amount of time and then whether in this amount of time
+and then check whether in this amount of time did someone actually
+cancel;&nbsp;</span></li>
+<li>in case of yes: you get a true</li>
+<li>else a false</li>
+<li>that is about this code:<br />
+<font face="courier new">bool canceled =
+token.WaitHandle.WaitOne(5000);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Console.WriteLine(canceled ? "Bomb
+disarmed." : "BOOM!!!!");</font><br /></li>
+</ul>
+</ul>
+<div>#6, Waiting for Tasks</div>
+</div>
+<div><br /></div>
 </en-note>]]></Content>
-        <ContentLength>8599</ContentLength>
+        <ContentLength>17357</ContentLength>
         <Created>1674913678744</Created>
-        <Updated>1674917782096</Updated>
+        <Updated>1674949426939</Updated>
         <Active>true</Active>
         <UpdateSequenceNumber>0</UpdateSequenceNumber>
         <NotebookGuid>2257337c-8355-450d-b6f5-7cf585b187fe</NotebookGuid>
