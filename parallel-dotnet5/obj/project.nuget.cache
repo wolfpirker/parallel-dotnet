@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "859FuPAoRMPQOXZWiS4Ksul/IC8UCGhw0JNEjGkBu27J64iqXsVOZhZM1nXbbZYrRuBZNSTRoM7XOIo0/YvGyA==",
+  "dgSpecHash": "BLIzOZCLJGJ2GVHykXW6uIMwGIKH99O9LDG1ik5l5VQHruZOBer2UbZTkJKr6t5rgbbooJ/zc8cXoQh87XsPDA==",
   "success": true,
-  "projectFilePath": "/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet5/parallel-dotnet5.csproj",
+  "projectFilePath": "/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet5/parallel-dotnet5.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

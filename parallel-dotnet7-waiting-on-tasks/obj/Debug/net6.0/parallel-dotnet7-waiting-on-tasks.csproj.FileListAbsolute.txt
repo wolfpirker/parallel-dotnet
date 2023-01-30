@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/parallel-dotnet7-waiting-on-tasks
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/ref/parallel-dotnet7-waiting-on-tasks.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/bin/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/ref/parallel-dotnet7-waiting-on-tasks.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet7-waiting-on-tasks/obj/Debug/net6.0/parallel-dotnet7-waiting-on-tasks.genruntimeconfig.cache

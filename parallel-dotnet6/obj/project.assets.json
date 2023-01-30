@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet6/parallel-dotnet6.csproj",
+      "projectUniqueName": "/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet6/parallel-dotnet6.csproj",
       "projectName": "parallel-dotnet6",
-      "projectPath": "/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet6/parallel-dotnet6.csproj",
+      "projectPath": "/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet6/parallel-dotnet6.csproj",
       "packagesPath": "/home/wolfi/.nuget/packages/",
-      "outputPath": "/home/wolfi/Projekte/parallel-dotnet/parallel-dotnet6/obj/",
+      "outputPath": "/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet6/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/wolfi/.nuget/NuGet/NuGet.Config"
@@ -49,8 +49,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -59,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }
