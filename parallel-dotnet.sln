@@ -21,6 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet8-exception-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet9-exception-handling", "parallel-dotnet9-exception-handling\parallel-dotnet9-exception-handling.csproj", "{42E63DA3-141E-49CA-A142-30D184CDAF6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet10-data-synchronisation-issue", "parallel-dotnet10-data-synchronisation-issue\parallel-dotnet10-data-synchronisation-issue.csproj", "{7817A402-39B0-44CD-8A5C-932C19A8D787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet11-interlocked-operations", "parallel-dotnet11-interlocked-operations\parallel-dotnet11-interlocked-operations.csproj", "{A002516B-1512-4677-B236-1CD31B8614A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet12-spin-locking", "parallel-dotnet12-spinning\parallel-dotnet12-spinning.csproj", "{E04864E9-5E21-40EE-B942-4074C1E6402A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet12-spin-locking", "parallel-dotnet12-spin-locking\parallel-dotnet12-spin-locking.csproj", "{33E751D5-37AA-4AF6-B761-37271A99D05B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +74,24 @@ Global
 		{42E63DA3-141E-49CA-A142-30D184CDAF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E63DA3-141E-49CA-A142-30D184CDAF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E63DA3-141E-49CA-A142-30D184CDAF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7817A402-39B0-44CD-8A5C-932C19A8D787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7817A402-39B0-44CD-8A5C-932C19A8D787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7817A402-39B0-44CD-8A5C-932C19A8D787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7817A402-39B0-44CD-8A5C-932C19A8D787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A002516B-1512-4677-B236-1CD31B8614A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A002516B-1512-4677-B236-1CD31B8614A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A002516B-1512-4677-B236-1CD31B8614A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A002516B-1512-4677-B236-1CD31B8614A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E04864E9-5E21-40EE-B942-4074C1E6402A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04864E9-5E21-40EE-B942-4074C1E6402A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04864E9-5E21-40EE-B942-4074C1E6402A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04864E9-5E21-40EE-B942-4074C1E6402A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E04864E9-5E21-40EE-B942-4074C1E6402A} = {E04864E9-5E21-40EE-B942-4074C1E6402A}
 	EndGlobalSection
 EndGlobal

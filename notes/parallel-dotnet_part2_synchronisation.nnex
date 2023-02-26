@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NixNote-Export>
+<nixnote-export version="2" exportType="export" application="NixNote" applicationVersion="2.x">
+    <Note>
+        <Guid>d3245444-15bb-42d0-b7e4-fcbd12f01fe2</Guid>
+        <Title>Udemy course: parallel-dotnet part 2</Title>
+        <Content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note>
+Data Sharing &amp; Synchronization
+<div><br /></div>
+<div>
+<ul>
+<li>Critical Sections</li>
+<li>Interlocked Operations</li>
+<li>Spin Locking and Lock Recursion</li>
+<li>Mutex</li>
+<li>Reader-Writer Locks</li>
+</ul>
+<div><br /></div>
+</div>
+<div><br />
+Atomic</div>
+<div>
+<ul>
+<li>We call an operation atomic if it cannot be interrupted</li>
+<li>we cannot separate it into several parts</li>
+<li>x++ is not atomic</li>
+<ul>
+<li>it is two operations</li>
+<li>vulnerable to race conditions</li>
+<li>someone can jump in between the 2 operations</li>
+</ul>
+<li>reference assignment are atomic</li>
+<ul>
+<li>reads and writes to values types &lt;= 32 bits, also &lt;= 64
+bits on &nbsp;64 bit systems</li>
+</ul>
+</ul>
+<div><br /></div>
+</div>
+<div><br /></div>
+<div>#2. Critical Sections</div>
+<div>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">where is
+synchronization important?</span></li>
+<ul>
+<li>example of a bank account</li>
+<li><span style="background-color: rgb(255, 255, 0);">we will write
+to a single bank account from lots of concurrent
+threads</span></li>
+<ul>
+<li>lots of operations</li>
+</ul>
+<li>for the example of the issue see parallel-dotnet-10 in the
+repo</li>
+<li>so without the padlock workaround: when the programm is run
+with multiple threads, you get a different result almost each
+time</li>
+</ul>
+<li>this is all happening because the withdraw and deposit
+operations are <span style=
+"background-color: rgb(255, 255, 0);">not ATOMIC!</span></li>
+<ul>
+<li>+= are two operations</li>
+<ul>
+<li>op1: temp &lt;- get_Balance() + amount</li>
+<li>op2: set_Balance(temp)</li>
+</ul>
+<li><span style="background-color: rgb(255, 255, 0);">simplest
+setup to make this example work</span> correctly is a&nbsp;</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">Critical
+Section</span></li>
+</ul>
+</ul>
+<li>a Critical Section</li>
+<ul>
+<li>is basically a piece of code, or a mock around a piece of
+code</li>
+<li>only one thread can enter this area</li>
+<li>in the example we create a ordinary object called
+¨padlock¨</li>
+<ul>
+<li>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #569cd6;">public</span> <span style=
+"color: #569cd6;">object</span> <span style=
+"color: #9cdcfe;">padlock</span> = <span style=
+"color: #569cd6;">new</span> <span style=
+"color: #569cd6;">object</span>();</div>
+</li>
+</ul>
+<li>and then we are going to lock on this object</li>
+<ul>
+<li>we use the lock keyword for that</li>
+</ul>
+<li>the example code:</li>
+</ul>
+</ul>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; lock (padlock)</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; {</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Balance +=
+amount;</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; }</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</font></div>
+<div><font face="droid sans mono"><br /></font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; public void Withdraw(int amount)</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; {</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; lock (padlock)</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; {</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Balance -=
+amount;</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; }</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; }</font></div>
+<ul>
+<ul>
+<li>with this code we said:</li>
+<ul>
+<li>you cannot enter both withdrawal and deposit at the same
+time!</li>
+<li>if you do enter, only one thread can enter!</li>
+<li>another thread has to wait until the padlock is removed</li>
+</ul>
+</ul>
+<li>so that is the way of a simple Synchronisation</li>
+</ul>
+<div><br /></div>
+</div>
+<div>#11: Interlocked Operations</div>
+<div>
+<ul>
+<li>the approach with padlocks is a valid approach, but there is a
+different approach, when we are working with variable of prmitive
+types</li>
+<li>there is a class called <span style=
+"background-color: rgb(0, 255, 255);">Interlocked</span> in
+System.Threading</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">which can
+perform certain operations atomically</span></li>
+<li><span style="background-color: rgb(255, 255, 0);">one of it is
+changing a integer by adding or substracting</span></li>
+</ul>
+<li>example code:</li>
+</ul>
+<div>
+<div><font face="droid sans mono">public void Deposit(int
+amount)</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+{</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; <span style=
+"background-color: rgb(255, 255, 0);">Interlocked.Add</span>(<span style="background-color: rgb(255, 255, 0);">ref</span>
+balance, amount);</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+}</font></div>
+<div><font face="droid sans mono"><br /></font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+public void Withdraw(int amount)</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+{</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; <span style=
+"background-color: rgb(255, 255, 0);">Interlocked.Add</span>(<span style="background-color: rgb(255, 255, 0);">ref</span>
+balance, -amount);</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; //balance -= amount;</font></div>
+<div><font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp;
+}</font></div>
+</div>
+<ul>
+<li>this approach, it is a also called:</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">¨lock free
+programming¨</span></li>
+</ul>
+<li>other functionaliy available:</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">Incremend,
+Decrement</span></li>
+<li><span style=
+"background-color: rgb(0, 255, 255);">MemoryBarrier</span> -&gt;
+shorthand for something else</li>
+</ul>
+<li>what is MemoryBarrier about?</li>
+<ul>
+<li>one problem of concurrent code: sometimes the CPU can reorder
+instructions, which are written as you write them</li>
+<li>the instructions before the memory barrier, must happen before
+the memory barrier!</li>
+<li>so it stops to reorder instruction through the memory
+barrier</li>
+</ul>
+<li>it is also tied to the <span style=
+"background-color: rgb(0, 255, 255);">volatile</span> keyword</li>
+<li>other Interlocked methods:</li>
+<ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">Exchange</span></li>
+<li><span style=
+"background-color: rgb(0, 255, 255);">CompareExchange</span></li>
+</ul>
+<li>used for thread safe assignment, and&nbsp;</li>
+<ul>
+<li>thread safe comparison</li>
+</ul>
+<li>CompareExchange compares to values for equality and if they are
+the equal:</li>
+<ul>
+<li>it replaces the first one</li>
+</ul>
+<li>Interlocked does give you a few options, but is not always a
+solution of programming without locks</li>
+</ul>
+<div><br /></div>
+</div>
+<div>#12: Spin Locking and Lock Recursion</div>
+<div>
+<ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">Spinning</span><span style=
+"background-color: rgb(255, 255, 0);">: the idea that you are
+continue waiting on something, but you do not give up your position
+in the scheduler; you do not yield to other threads!</span></li>
+<ul>
+<li>instead you are wasting CPU cycles!</li>
+</ul>
+<li>a spin lock is similar to the locking we have seen
+previously</li>
+<ul>
+<li>but it does it using the spinning mechanism!</li>
+<li>it introduces us to an interesting idea, which are <span style=
+"background-color: rgb(255, 255, 0);">lock recursions</span></li>
+</ul>
+<li><span style="background-color: rgb(255, 255, 0);">so the spin
+lock is going to help us control access to the variables or indeed
+to the invocation of these functions</span></li>
+<li>in this approach</li>
+<ul>
+<li>we are going to have a bool variable lockTaken</li>
+</ul>
+<li>another lock mechanism shortly spoken about in this part:</li>
+<ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">Monitor.TryEnter()</span></li>
+<ul>
+<li>it is a lock with timeout</li>
+<li>after that you just pass through</li>
+</ul>
+</ul>
+<li>up until now, we assumed a lock always succeeds</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">e.g. if you
+have two different operations trying to take each others lock, your
+application is going to freeze</span></li>
+</ul>
+<li>so we have a mechanism of failing to take a lock</li>
+<ul>
+<li>in the example:</li>
+<li>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #4ec9b0;">SpinLock</span> <span style=
+"color: #9cdcfe;">sl</span> = <span style=
+"color: #569cd6;">new</span> <span style=
+"color: #4ec9b0;">SpinLock</span>();</div>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+//...</div>
+<div style=
+"background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<div style=
+"font-family: 'Droid Sans Mono', monospace, monospace; line-height: 19px;">
+<div><span style="color: rgb(86, 156, 214);">bool</span>
+<span style="color: rgb(156, 220, 254);">lockTaken</span>
+<font color="#D4D4D4">=</font> <span style=
+"color: rgb(86, 156, 214);">false</span><font color=
+"#D4D4D4">;</font></div>
+<div style="color: rgb(212, 212, 212);"><span style=
+"color: #c586c0;">try</span></div>
+<div style="color: rgb(212, 212, 212);">{</div>
+<div style="color: rgb(212, 212, 212);"><span style=
+"color: #6a9955;">// sl.IsHeld</span></div>
+<div style="color: rgb(212, 212, 212);"><span style=
+"color: #6a9955;">// sl.IsHeldByCurrentThread</span></div>
+<div style="color: rgb(212, 212, 212);"><span style=
+"color: #9cdcfe;">sl</span>.<span style=
+"color: #dcdcaa;">Enter</span>(<span style=
+"color: #569cd6;">ref</span> <span style=
+"color: #9cdcfe;">lockTaken</span>);</div>
+</div>
+</div>
+</li>
+<li>for full code see the repo parallel-dotnet12 project</li>
+</ul>
+<li>possible exception with locks</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">Exception:
+System.Threading.LockRecursionException: The calling thread already
+holds the lock.</span><br /></li>
+</ul>
+<li>SpinLock takes an bool argument EnableThreadOwnerTracking, if
+true</li>
+<ul>
+<li>then we get that LockRecursionException, in the case when we
+are in another lock</li>
+<li>if false:</li>
+<ul>
+<li>Deadlock&nbsp;</li>
+</ul>
+</ul>
+<li>lock recursion is a problem</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">if you are
+already on a lock on something, then taking another lock might not
+be possible</span></li>
+</ul>
+<li>other contructs do support the idea of recursion</li>
+<ul>
+<li>the takeaway should be:</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">recursion is
+dangerous!</span></li>
+<li><span style="background-color: rgb(255, 255, 0);">it is
+difficult to control: who to lock and when</span></li>
+</ul>
+</ul>
+</ul>
+<div>#13: Mutex</div>
+</div>
+<div>
+<ul>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+</ul>
+</div>
+<div><br /></div>
+<div>#14: Reader-Writer Locks</div>
+<div>
+<ul>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+</ul>
+</div>
+</en-note>]]></Content>
+        <ContentLength>12073</ContentLength>
+        <Created>1677367657587</Created>
+        <Updated>1677417320545</Updated>
+        <Active>true</Active>
+        <UpdateSequenceNumber>0</UpdateSequenceNumber>
+        <NotebookGuid>c44d113f-96e0-476e-bfcb-410e145cb349</NotebookGuid>
+        <Attributes>
+            <Author>Wolfgang</Author>
+        </Attributes>
+        <Dirty>true</Dirty>
+    </Note>
+</nixnote-export>

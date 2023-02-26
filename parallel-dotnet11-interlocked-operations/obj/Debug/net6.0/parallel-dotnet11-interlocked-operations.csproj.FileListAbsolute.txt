@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/parallel-dotnet11-interlocked-operations
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/parallel-dotnet11-interlocked-operations.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/parallel-dotnet11-interlocked-operations.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/parallel-dotnet11-interlocked-operations.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/ref/parallel-dotnet11-interlocked-operations.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/bin/Debug/net6.0/parallel-dotnet11-interlocked-operations.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/ref/parallel-dotnet11-interlocked-operations.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet11-interlocked-operations/obj/Debug/net6.0/parallel-dotnet11-interlocked-operations.genruntimeconfig.cache

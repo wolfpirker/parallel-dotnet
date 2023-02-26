@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/ref/parallel-dotnet10-data-synchronisation-issue.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/bin/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/ref/parallel-dotnet10-data-synchronisation-issue.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet10-data-synchronisation-issue/obj/Debug/net6.0/parallel-dotnet10-data-synchronisation-issue.genruntimeconfig.cache
