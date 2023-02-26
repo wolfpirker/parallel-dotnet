@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/parallel-dotnet13-mutex
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/parallel-dotnet13-mutex.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/parallel-dotnet13-mutex.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/parallel-dotnet13-mutex.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/ref/parallel-dotnet13-mutex.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/bin/Debug/net6.0/parallel-dotnet13-mutex.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/ref/parallel-dotnet13-mutex.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet13-mutex/obj/Debug/net6.0/parallel-dotnet13-mutex.genruntimeconfig.cache

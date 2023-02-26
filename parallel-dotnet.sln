@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet12-spin-lock
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet12-spin-locking", "parallel-dotnet12-spin-locking\parallel-dotnet12-spin-locking.csproj", "{33E751D5-37AA-4AF6-B761-37271A99D05B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet13-mutex", "parallel-dotnet13-mutex\parallel-dotnet13-mutex.csproj", "{9847D6C9-F84E-4661-8609-E0A4990E38A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet14-ReaderWriter", "parallel-dotnet14-ReaderWriter\parallel-dotnet14-ReaderWriter.csproj", "{594E9BD7-0A1D-4121-A400-28F781364CCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +94,14 @@ Global
 		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33E751D5-37AA-4AF6-B761-37271A99D05B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9847D6C9-F84E-4661-8609-E0A4990E38A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9847D6C9-F84E-4661-8609-E0A4990E38A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9847D6C9-F84E-4661-8609-E0A4990E38A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9847D6C9-F84E-4661-8609-E0A4990E38A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E04864E9-5E21-40EE-B942-4074C1E6402A} = {E04864E9-5E21-40EE-B942-4074C1E6402A}
