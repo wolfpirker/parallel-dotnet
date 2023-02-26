@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NixNote-Export>
+<nixnote-export version="2" exportType="export" application="NixNote" applicationVersion="2.x">
+    <Note>
+        <Guid>67a980b7-d219-4635-a487-5bdbb0197282</Guid>
+        <Title>Udemy course: parallel-dotnet part 3</Title>
+        <Content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note>
+Concurrent Collections
+<div>
+<ul>
+<li>Thread-safe collection of the collections you are probably used
+to</li>
+<li>the concurrent collection we will be looking into:</li>
+<ul>
+<li>ConcurrentDictionary</li>
+<li>Producer-consumer collections</li>
+<ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">ConcurrentQueue</span></li>
+<ul>
+<li>similar to usual Queue</li>
+</ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">ConcurrentStack</span></li>
+<ul>
+<li>similar to Stack</li>
+</ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">ConcurrentBag</span></li>
+<ul>
+<li>new</li>
+</ul>
+</ul>
+</ul>
+<li>what is the <span style=
+"background-color: rgb(0, 255, 255);">Producer-consumer</span>
+pattern?</li>
+<ul>
+<li>BlockingCollection</li>
+</ul>
+</ul>
+<div><br /></div>
+<br />
+#17: Concurrent Dictionary</div>
+<div>
+<ul>
+<li>in the example we are all doing it in a static context</li>
+<ul>
+<li>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">private</span> <span style=
+"color: #569cd6;">static</span> <span style=
+"color: #9cdcfe;">ConcurrentDictionary</span>&lt;<span style=
+"color: #569cd6;">string</span>, <span style=
+"color: #569cd6;">string</span>&gt; <span style=
+"color: #9cdcfe;">capitals</span></div>
+<div>= <span style="color: #569cd6;">new</span> <span style=
+"color: #9cdcfe;">ConcurrentDictionary</span>&lt;<span style=
+"color: #569cd6;">string</span>, <span style=
+"color: #569cd6;">string</span>&gt;();</div>
+</div>
+</li>
+</ul>
+<li>there is not any <span style=
+"background-color: rgb(0, 255, 255);">Add</span> method!</li>
+<ul>
+<li>in a ordinary setting with normal Dictionaries, when the key
+exists you get an exception</li>
+<li>instead you get a <span style=
+"background-color: rgb(0, 255, 255);">TryAdd</span>() Function</li>
+<ul>
+<li>it also takes a key and value</li>
+<li>it returns an boolean, which indicates whether adding it was
+succesful or not since it existed</li>
+</ul>
+</ul>
+<li>in the example we are using Task.CurrentId to find out which
+thread, added an item</li>
+<ul>
+<li>when it is 0: it is in the main thread</li>
+</ul>
+</ul>
+<div><font face="droid sans mono">string who = <span style=
+"background-color: rgb(255, 255, 0);">Task.CurrentId.HasValue</span>
+? ("Task " + Task.CurrentId) : "Main thread";</font></div>
+<ul>
+<li>other useful methods to use with Concurrent Dictionaries:</li>
+<ul>
+<li>AddOrUpdate, example:<br /></li>
+</ul>
+</ul>
+<font face="droid sans mono">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; var s = <span style=
+"background-color: rgb(0, 255, 255);">capitals.AddOrUpdate</span>("Russia",
+"Moscow", (k, old) =&gt; old + " --&gt; Moscow");</font></div>
+<div>
+<ul>
+<ul>
+<ul>
+<li><font face="droid sans mono">Note: alternatively you can also
+use the [] indexer= writing style</font></li>
+</ul>
+<li><font face="droid sans mono">GetOrAdd(), example:</font></li>
+</ul>
+</ul>
+<font face="droid sans mono">var capOfNorway = <span style=
+"background-color: rgb(0, 255, 255);">capitals.GetOrAdd</span>("Sweden",
+"Stockholm");<br /></font>
+<ul>
+<li>TryRemove()</li>
+<ul>
+<li>in similar fashion as above, just try remove</li>
+<li>code example:</li>
+</ul>
+</ul>
+<font face="droid sans mono">var didRemove = <span style=
+"background-color: rgb(0, 255, 255);">capitals.TryRemove</span>(toRemove,
+out removed);</font><br />
+<ul>
+<li>Note:</li>
+<ul>
+<li>some methods on (concurrent) Dictionaries are slow</li>
+<li>like <span style=
+"background-color: rgb(0, 255, 255);">Count</span>()</li>
+</ul>
+</ul>
+</div>
+<div>#18: Concurrent Queue</div>
+<div>
+<ul>
+<li>similar to Concurrent Dictionary</li>
+<ul>
+<li>but simpler, less methods to know</li>
+</ul>
+<li>constructor example:</li>
+<ul>
+<li>
+<div style=
+"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: 'Droid Sans Mono', monospace, monospace; font-size: 14px; line-height: 19px; white-space: pre;">
+<span style="color: #569cd6;">var</span> <span style=
+"color: #9cdcfe;">q</span> = <span style=
+"color: #569cd6;">new</span> <span style=
+"color: #4ec9b0;">ConcurrentQueue</span>&lt;<span style=
+"color: #569cd6;">int</span>&gt;();</div>
+</li>
+</ul>
+<li>methods to use:</li>
+<ul>
+<li><span style=
+"background-color: rgb(0, 255, 255);">q.Enqueue</span>(1);<br /></li>
+<li>if (<span style=
+"background-color: rgb(0, 255, 255);">q.TryDequeue</span>(out
+result))</li>
+<li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</li>
+<li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Console.WriteLine($"Removed element {result}");</li>
+<li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+<li><span style=
+"background-color: rgb(0, 255, 255);">Peek()</span></li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">if
+(q.TryPeek(out result))</span></li>
+</ul>
+</ul>
+<li>similar to a Queue, but with some safeguards, to use it safely
+in a multithreaded setting</li>
+</ul>
+<div><br /></div>
+</div>
+<div><br /></div>
+</en-note>]]></Content>
+        <ContentLength>5136</ContentLength>
+        <Created>1677448343327</Created>
+        <Updated>1677451309741</Updated>
+        <Active>true</Active>
+        <UpdateSequenceNumber>0</UpdateSequenceNumber>
+        <NotebookGuid>c44d113f-96e0-476e-bfcb-410e145cb349</NotebookGuid>
+        <Attributes>
+            <Author>Wolfgang</Author>
+        </Attributes>
+        <Dirty>true</Dirty>
+    </Note>
+</nixnote-export>

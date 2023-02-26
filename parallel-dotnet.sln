@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet13-mutex", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet14-ReaderWriter", "parallel-dotnet14-ReaderWriter\parallel-dotnet14-ReaderWriter.csproj", "{594E9BD7-0A1D-4121-A400-28F781364CCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet15-concurrent-dictionary", "parallel-dotnet15-concurrent-dictionary\parallel-dotnet15-concurrent-dictionary.csproj", "{1C83CD66-A29D-46D4-9FF1-FA10F7CCFF5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet16-concurrent-queue", "parallel-dotnet16-concurrent-queue\parallel-dotnet16-concurrent-queue.csproj", "{F0B12AB2-2085-49D9-990C-F4BAD4370D1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +106,14 @@ Global
 		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{594E9BD7-0A1D-4121-A400-28F781364CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C83CD66-A29D-46D4-9FF1-FA10F7CCFF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C83CD66-A29D-46D4-9FF1-FA10F7CCFF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C83CD66-A29D-46D4-9FF1-FA10F7CCFF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C83CD66-A29D-46D4-9FF1-FA10F7CCFF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B12AB2-2085-49D9-990C-F4BAD4370D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B12AB2-2085-49D9-990C-F4BAD4370D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B12AB2-2085-49D9-990C-F4BAD4370D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B12AB2-2085-49D9-990C-F4BAD4370D1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E04864E9-5E21-40EE-B942-4074C1E6402A} = {E04864E9-5E21-40EE-B942-4074C1E6402A}
