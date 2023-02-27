@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/ref/parallel-dotnet19-producer-consumer-pattern.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/bin/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/ref/parallel-dotnet19-producer-consumer-pattern.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet19-producer-consumer-pattern/obj/Debug/net6.0/parallel-dotnet19-producer-consumer-pattern.genruntimeconfig.cache

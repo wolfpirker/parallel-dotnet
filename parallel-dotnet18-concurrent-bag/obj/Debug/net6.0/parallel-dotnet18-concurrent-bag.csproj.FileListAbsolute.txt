@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/parallel-dotnet18-concurrent-bag
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/parallel-dotnet18-concurrent-bag.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/parallel-dotnet18-concurrent-bag.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/parallel-dotnet18-concurrent-bag.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/ref/parallel-dotnet18-concurrent-bag.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/bin/Debug/net6.0/parallel-dotnet18-concurrent-bag.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/ref/parallel-dotnet18-concurrent-bag.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet18-concurrent-bag/obj/Debug/net6.0/parallel-dotnet18-concurrent-bag.genruntimeconfig.cache
