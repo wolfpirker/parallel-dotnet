@@ -1,0 +1,15 @@
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/parallel-dotnet20-continuation
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/parallel-dotnet20-continuation.deps.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/parallel-dotnet20-continuation.runtimeconfig.json
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/parallel-dotnet20-continuation.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/ref/parallel-dotnet20-continuation.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/bin/Debug/net6.0/parallel-dotnet20-continuation.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.csproj.AssemblyReference.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.AssemblyInfoInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.AssemblyInfo.cs
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.csproj.CoreCompileInputs.cache
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/ref/parallel-dotnet20-continuation.dll
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.pdb
+/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet20-continuation/obj/Debug/net6.0/parallel-dotnet20-continuation.genruntimeconfig.cache
