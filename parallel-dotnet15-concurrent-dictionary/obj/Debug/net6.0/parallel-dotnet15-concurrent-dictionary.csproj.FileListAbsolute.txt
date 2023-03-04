@@ -1,5 +1,0 @@
-/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet15-concurrent-dictionary/obj/Debug/net6.0/parallel-dotnet15-concurrent-dictionary.csproj.AssemblyReference.cache
-/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet15-concurrent-dictionary/obj/Debug/net6.0/parallel-dotnet15-concurrent-dictionary.GeneratedMSBuildEditorConfig.editorconfig
-/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet15-concurrent-dictionary/obj/Debug/net6.0/parallel-dotnet15-concurrent-dictionary.AssemblyInfoInputs.cache
-/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet15-concurrent-dictionary/obj/Debug/net6.0/parallel-dotnet15-concurrent-dictionary.AssemblyInfo.cs
-/home/wolfi/Projekte/Csharp/parallel-dotnet/parallel-dotnet15-concurrent-dictionary/obj/Debug/net6.0/parallel-dotnet15-concurrent-dictionary.csproj.CoreCompileInputs.cache

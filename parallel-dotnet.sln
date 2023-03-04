@@ -55,6 +55,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet28-ManualRes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet29-SemaphoreSlim", "parallel-dotnet29-SemaphoreSlim\parallel-dotnet29-SemaphoreSlim.csproj", "{2BAAE1C8-AC27-4B00-9E57-33462A6D9D4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet32-parallel-invoke-for-foreach", "parallel-dotnet32-parallel-invoke-for-foreach\parallel-dotnet32-parallel-invoke-for-foreach.csproj", "{52585AAB-841E-4F52-8E5A-7FA444D40EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet33-breaking-cancellation-exceptions", "parallel-dotnet33-breaking-cancellation-exceptions\parallel-dotnet33-breaking-cancellation-exceptions.csproj", "{7325CD7B-9E8C-4775-A2BF-9B8747DE15C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet34-thread-local-storage", "parallel-dotnet34-thread-local-storage\parallel-dotnet34-thread-local-storage.csproj", "{600827C0-8FCD-4B23-AAE2-B331093032B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet35-partitioning", "parallel-dotnet35-partitioning\parallel-dotnet35-partitioning.csproj", "{5BB5B04B-DE5E-41E3-9F65-3269709592D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,6 +176,26 @@ Global
 		{2BAAE1C8-AC27-4B00-9E57-33462A6D9D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BAAE1C8-AC27-4B00-9E57-33462A6D9D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BAAE1C8-AC27-4B00-9E57-33462A6D9D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52585AAB-841E-4F52-8E5A-7FA444D40EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52585AAB-841E-4F52-8E5A-7FA444D40EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52585AAB-841E-4F52-8E5A-7FA444D40EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52585AAB-841E-4F52-8E5A-7FA444D40EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7325CD7B-9E8C-4775-A2BF-9B8747DE15C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7325CD7B-9E8C-4775-A2BF-9B8747DE15C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7325CD7B-9E8C-4775-A2BF-9B8747DE15C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7325CD7B-9E8C-4775-A2BF-9B8747DE15C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600827C0-8FCD-4B23-AAE2-B331093032B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600827C0-8FCD-4B23-AAE2-B331093032B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600827C0-8FCD-4B23-AAE2-B331093032B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600827C0-8FCD-4B23-AAE2-B331093032B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE0C02E-580B-4948-800F-826CF059FA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE0C02E-580B-4948-800F-826CF059FA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE0C02E-580B-4948-800F-826CF059FA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE0C02E-580B-4948-800F-826CF059FA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E04864E9-5E21-40EE-B942-4074C1E6402A} = {E04864E9-5E21-40EE-B942-4074C1E6402A}
