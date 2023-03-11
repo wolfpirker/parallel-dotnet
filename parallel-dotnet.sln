@@ -63,6 +63,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet34-thread-lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet35-partitioning", "parallel-dotnet35-partitioning\parallel-dotnet35-partitioning.csproj", "{5BB5B04B-DE5E-41E3-9F65-3269709592D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet38-parallel-Linq", "parallel-dotnet38-parallel-Linq\parallel-dotnet38-parallel-Linq.csproj", "{3025FB4A-37C5-443F-96DF-8D2C382F76A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet39-cancellation-exceptions", "parallel-dotnet39-cancellation-exceptions\parallel-dotnet39-cancellation-exceptions.csproj", "{12E3C5F6-C915-4C30-94AC-30CFC1071A94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet40-merge", "parallel-dotnet40-merge\parallel-dotnet40-merge.csproj", "{31F9EEC5-F2D7-4D06-BF99-7580FC4B5C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parallel-dotnet41-aggregation", "parallel-dotnet41-aggregation\parallel-dotnet41-aggregation.csproj", "{32EF7999-64DA-435D-B3F5-2B0DA584279D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -196,6 +204,22 @@ Global
 		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB5B04B-DE5E-41E3-9F65-3269709592D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3025FB4A-37C5-443F-96DF-8D2C382F76A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3025FB4A-37C5-443F-96DF-8D2C382F76A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3025FB4A-37C5-443F-96DF-8D2C382F76A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3025FB4A-37C5-443F-96DF-8D2C382F76A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E3C5F6-C915-4C30-94AC-30CFC1071A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E3C5F6-C915-4C30-94AC-30CFC1071A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E3C5F6-C915-4C30-94AC-30CFC1071A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E3C5F6-C915-4C30-94AC-30CFC1071A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F9EEC5-F2D7-4D06-BF99-7580FC4B5C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F9EEC5-F2D7-4D06-BF99-7580FC4B5C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F9EEC5-F2D7-4D06-BF99-7580FC4B5C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F9EEC5-F2D7-4D06-BF99-7580FC4B5C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EF7999-64DA-435D-B3F5-2B0DA584279D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EF7999-64DA-435D-B3F5-2B0DA584279D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EF7999-64DA-435D-B3F5-2B0DA584279D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EF7999-64DA-435D-B3F5-2B0DA584279D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E04864E9-5E21-40EE-B942-4074C1E6402A} = {E04864E9-5E21-40EE-B942-4074C1E6402A}
